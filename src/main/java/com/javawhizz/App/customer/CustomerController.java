@@ -9,15 +9,15 @@ import java.util.List;
 @RestController
 @RequestMapping("api/v1/customers")
 public class CustomerController {
-    private static final List<Customer> CUSTOMERS = List.of(
-            new Customer(1L, "john", "doe", "john@javawhizz.com"),
-            new Customer(2L, "mary", "public", "mary@javawhizz.com"),
-            new Customer(3L, "elon", "musk","elon@javawhizz.com"),
-            new Customer(4L, "dunny","duncan","dunny@javawhizz.com")
+    private static final List<CustomerModel> CUSTOMERS = List.of(
+            new CustomerModel(1L, "john", "doe", "john@javawhizz.com"),
+            new CustomerModel(2L, "mary", "public", "mary@javawhizz.com"),
+            new CustomerModel(3L, "elon", "musk","elon@javawhizz.com"),
+            new CustomerModel(4L, "dunny","duncan","dunny@javawhizz.com")
     );
 
     @GetMapping
-    public List<Customer> findAllCustomers(){
+    public List<CustomerModel> findAllCustomers(){
         return CUSTOMERS;
     }
 }
